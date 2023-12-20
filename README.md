@@ -1,12 +1,14 @@
 # Rubik's Cube Solver
 
-This is a simple Rubik's Cube Solver implemented in Java using the A* algorithm.
+This repository hosts a simple Rubik's Cube Solver implemented in Java using the A* algorithm.
 
-## Cube Representation
+
+
+### Cube Representation
 
 The Rubik's Cube is represented as a 6x3x3 matrix. Each position corresponds to a face of the cube, and the 3 positions correspond to each row and column of the cube.
 
-### Assumptions
+#### Assumptions
 
 1. The cube coding works based on a 3D model.
 2. Sides are numbered as follows:
@@ -20,16 +22,16 @@ The Rubik's Cube is represented as a 6x3x3 matrix. Each position corresponds to 
 5. Central cubes remain in their position throughout the solution.
 7. Each cube has a defined face, line, and column.
 
-### Moves
+#### Moves
 
 - Possible moves: 18 (12 for moveUP/moveDOWN/moveLEFT/moveRIGHT and 6 for moveUP/moveDOWN on the 2nd face).
 - Moves on central columns are coded as simultaneous movements of the sides.
 
-### Randomization
+#### Randomization
 
 Randomizing the cube is done by starting from the final state and performing successive random moves.
 
-## Example Moves
+#### Example Moves
 
 1. **MoveRIGHT the middle line of the 1st face**
 
@@ -91,7 +93,7 @@ OOO GGG RRR BBB
 
  ```
 
-## Resolution
+#### Resolution
 
 When solving, a `State` class is used to implement cube properties and those needed for the A* algorithm.
 
